@@ -85,7 +85,7 @@ class AuthActivity : AppCompatActivity() {
             } catch (e: ApiException) {
                 setLoading(false)
                 Log.e(TAG, "Google sign-in failed: statusCode=${e.statusCode}", e)
-                Toast.makeText(this, getString(R.string.sign_in_failed), Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Sign-in failed: code ${e.statusCode}", Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -106,7 +106,7 @@ class AuthActivity : AppCompatActivity() {
             .addOnFailureListener { error ->
                 setLoading(false)
                 Log.e(TAG, "Firebase authentication failed", error)
-                Toast.makeText(this, getString(R.string.sign_in_failed), Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Firebase auth failed: ${error.message}", Toast.LENGTH_LONG).show()
             }
     }
 
