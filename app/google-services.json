@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "705764658695",
+    "project_id": "restroapp-664f7",
+    "storage_bucket": "restroapp-664f7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705764658695:android:78ae55fb33dda0c6cd64a2",
+        "android_client_info": {
+          "package_name": "com.companyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "705764658695-6vm8c3r394pqqr2ra4tjn6ase2bvmno7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyapp",
+            "certificate_hash": "01fd5a22dbd708f3db9410d1dbd037634ae8b446"
+          }
+        },
+        {
+          "client_id": "705764658695-va4n7l6auq178797r99oipt321hkk25l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyapp",
+            "certificate_hash": "452d3098c3d1294228cc918a5cc2b73622945926"
+          }
+        },
+        {
+          "client_id": "705764658695-jln56jfjbcm5cv47nj4oiitjfj53p0o2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl_8LAzH3zsXrXiuDRcIhOHBe0MB1H1vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705764658695-jln56jfjbcm5cv47nj4oiitjfj53p0o2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
