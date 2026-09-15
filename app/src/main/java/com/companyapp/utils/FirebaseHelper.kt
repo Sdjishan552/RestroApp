@@ -1,9 +1,14 @@
 package com.companyapp.utils
 
+import android.content.Context
+import com.companyapp.R
 import com.companyapp.models.Company
 import com.companyapp.models.Employee
 import com.companyapp.models.Permissions
 import com.companyapp.models.StockItem
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -12,6 +17,20 @@ import com.google.firebase.ktx.Firebase
 object FirebaseHelper {
     val auth: FirebaseAuth get() = FirebaseAuth.getInstance()
     val db: FirebaseFirestore get() = Firebase.firestore
+
+    fun getGoogleSignInClient(context: Context): GoogleSignInClient {
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(context.getString(R.string.default_web_client_id))
+            .requestEmail()
+            .requestProfile()
+            .build()
+        return GoogleSignIn.getClient(context, gso)
+    }
+
+    fun signOut(context: Context, onComplete: () -> Unit) {
+        auth.signOut()
+        getGoogleSignInClient(context).signOut().addOnCompleteListener { onComplete() }
+    }
 
     private fun emailKey(email: String) =
         email.trim().lowercase().replace(".", "_dot_").replace("@", "_at_")
