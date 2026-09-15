@@ -25,22 +25,13 @@ jobs:
         with:
           gradle-version: 8.10.2
 
-      - name: Restore Android debug keystore
-        uses: actions/cache@v4
-        with:
-          path: ~/.android/debug.keystore
-          key: android-debug-keystore-v1
-
       - name: Build debug APK
         run: gradle :app:assembleDebug
 
-      - name: Export debug signing certificate info
+      - name: Export APK signing certificate info
         run: |
-          keytool -list -v \
-            -alias androiddebugkey \
-            -keystore "$HOME/.android/debug.keystore" \
-            -storepass android \
-            -keypass android | tee debug-signing-certificate.txt
+          APKSIGNER="$(find "$ANDROID_HOME/build-tools" -name apksigner -type f | sort -V | tail -n 1)"
+          "$APKSIGNER" verify --print-certs app/build/outputs/apk/debug/app-debug.apk | tee debug-signing-certificate.txt
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
