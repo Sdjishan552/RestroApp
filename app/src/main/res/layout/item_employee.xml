@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tvEmployeeName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Employee" android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvEmployeeEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="employee@gmail.com" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+            </LinearLayout>
+            <TextView android:id="@+id/tvJoinStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="Pending" android:textColor="@color/white" android:textSize="11sp" android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="vertical">
+            <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchStock" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_stock"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchOrders" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_orders"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchFinance" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_finance"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchProducts" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_products"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchReports" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_reports"/>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnRemove" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:text="@string/remove_employee" android:textColor="@color/error" app:strokeColor="@color/error" app:cornerRadius="12dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

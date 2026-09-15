@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="180dp" android:background="@drawable/bg_header_gradient" android:gravity="bottom" android:orientation="vertical" android:padding="22dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnBack" style="@style/Widget.MaterialComponents.Button.TextButton" android:layout_width="wrap_content" android:layout_height="42dp" android:text="Back" android:textColor="@color/white" app:icon="@android:drawable/ic_media_previous" app:iconTint="@color/white"/>
+        <TextView android:id="@+id/tvCompanyName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Company" android:textColor="#D9E2FF" android:textSize="14sp"/>
+        <TextView android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/coming_soon" android:textColor="@color/white" android:textSize="28sp" android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:padding="24dp">
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="18dp" app:cardElevation="3dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical" android:padding="28dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/coming_soon" android:textColor="@color/primary" android:textSize="14sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center" android:lineSpacingMultiplier="1.35" android:text="@string/feature_coming_soon" android:textColor="@color/text_secondary" android:textSize="15sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

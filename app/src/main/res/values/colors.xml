@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Colors -->
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="primary_light">#7986CB</color>
+    <color name="accent">#FFC107</color>
+
+    <!-- Module Card Colors -->
+    <color name="card_stock">#6C63FF</color>
+    <color name="card_stock_end">#9C8FFF</color>
+    <color name="card_orders">#FF6D00</color>
+    <color name="card_orders_end">#FF9100</color>
+    <color name="card_finance">#00897B</color>
+    <color name="card_finance_end">#26A69A</color>
+    <color name="card_products">#D81B60</color>
+    <color name="card_products_end">#E91E8C</color>
+    <color name="card_employees">#0277BD</color>
+    <color name="card_employees_end">#039BE5</color>
+    <color name="card_reports">#6A1B9A</color>
+    <color name="card_reports_end">#AB47BC</color>
+    <color name="card_settings">#37474F</color>
+    <color name="card_settings_end">#607D8B</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1A1A2E</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_hint">#9CA3AF</color>
+
+    <!-- Background Colors -->
+    <color name="background">#F0F2F8</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="divider">#E5E7EB</color>
+
+    <!-- Status Colors -->
+    <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+    <color name="info">#3B82F6</color>
+
+    <!-- Welcome Screen -->
+    <color name="welcome_start">#0D0D2B</color>
+    <color name="welcome_mid">#1A237E</color>
+    <color name="welcome_end">#4A148C</color>
+
+    <!-- Overlays -->
+    <color name="overlay_dark">#80000000</color>
+    <color name="overlay_light">#40FFFFFF</color>
+
+    <!-- Misc -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="google_btn_border">#DADCE0</color>
+    <color name="low_stock_bg">#FFF3E0</color>
+    <color name="low_stock_text">#E65100</color>
+    <color name="in_stock_bg">#E8F5E9</color>
+    <color name="in_stock_text">#2E7D32</color>
+    <color name="header_bg_start">#3F51B5</color>
+    <color name="header_bg_end">#7C4DFF</color>
+</resources>

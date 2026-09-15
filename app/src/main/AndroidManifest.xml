@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BizManager"
+        android:usesCleartextTraffic="false">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BizManager.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".auth.WelcomeActivity" android:exported="false"/>
+        <activity android:name=".auth.AuthActivity" android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".auth.CompanySetupActivity" android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".auth.JoinCompanyActivity" android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity android:name=".admin.AdminDashboardActivity" android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity android:name=".admin.EmployeeManagementActivity" android:exported="false"/>
+        <activity android:name=".admin.StockManagementActivity" android:exported="false"/>
+        <activity android:name=".admin.AddStockItemActivity" android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".admin.OrdersActivity" android:exported="false"/>
+        <activity android:name=".admin.FinanceActivity" android:exported="false"/>
+        <activity android:name=".admin.ProductsActivity" android:exported="false"/>
+        <activity android:name=".admin.ReportsActivity" android:exported="false"/>
+        <activity android:name=".admin.AdminSettingsActivity" android:exported="false"/>
+
+        <activity android:name=".employee.EmployeeDashboardActivity" android:exported="false"
+            android:launchMode="singleTop"/>
+
+    </application>
+</manifest>

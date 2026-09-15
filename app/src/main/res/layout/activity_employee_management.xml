@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="150dp" android:background="@drawable/bg_card_employees" android:gravity="bottom" android:orientation="vertical" android:padding="22dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnBack" style="@style/Widget.MaterialComponents.Button.TextButton" android:layout_width="wrap_content" android:layout_height="42dp" android:text="Back" android:textColor="@color/white" app:icon="@android:drawable/ic_media_previous" app:iconTint="@color/white"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/employee_management" android:textColor="@color/white" android:textSize="26sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="16dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_employee" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="14dp" android:text="Add an employee Gmail address, choose what they can see, then share your company code privately." android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilEmployeeEmail" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/employee_email_hint">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEmployeeEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress" android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/permissions_label" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchStock" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_stock"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchOrders" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_orders"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchFinance" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_finance"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchProducts" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_products"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/switchReports" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_reports"/>
+                    <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginTop="8dp" android:visibility="gone"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnAddEmployee" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="14dp" android:text="@string/add_employee" android:textStyle="bold" app:backgroundTint="@color/card_employees" app:cornerRadius="14dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:layout_marginBottom="10dp" android:text="Team Access" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvEmpty" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_stat_card" android:gravity="center" android:padding="18dp" android:text="@string/no_employees" android:textColor="@color/text_secondary" android:visibility="gone"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvEmployees" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
