@@ -62,10 +62,10 @@ class CompanySetupActivity : AppCompatActivity() {
                 setLoading(false)
                 showCode(code, name)
             },
-            onError = {
-                setLoading(false)
-                Toast.makeText(this, getString(R.string.error_generic), Toast.LENGTH_SHORT).show()
-            }
+            onError = { e ->
+    setLoading(false)
+    Toast.makeText(this, "Create company failed: ${e.message}", Toast.LENGTH_LONG).show()
+}
         )
     }
 
